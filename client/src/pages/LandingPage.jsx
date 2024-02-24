@@ -4,6 +4,7 @@ import { BackgroundGradientAnimation } from "../components/ui/BgGradient";
 import { SparklesText } from "../components/SparklesText";
 import SecureBox from "../components/SecureBox";
 import { WavyBox } from "../components/WavyBox";
+import { Link } from "react-router-dom";
 
 function LandingPage() {
   return (
@@ -18,19 +19,19 @@ function LandingPage() {
 
           <div className="flex flex-col items-start space-y-4">
             <h1 className="text-[3.2rem] font-bold max-md:text-[2.4rem] text-left max-w-[93%] ">
-              The First Web3 Escrow on Shido Network
+              The First Escrow on Shido Network
             </h1>
             <p className="text-gray-400 w-[90%] pb-12 text-[1rem]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-              quis aspernatur odit, rerum optio ex magnam!
+            Your Transactions, Your Terms: Trust the Shido Decentralized Escrow! 
             </p>
 
-            <button
-              className="bg-primary px-10 font-semibold py-2 hover:bg-blue-400
+            <Link
+              to="/products"
+              className="bg-primary hover:text-black px-10 font-semibold py-2 hover:bg-blue-400 cursor-pointer
           rounded-md "
             >
-              Launch App
-            </button>
+              View Products
+            </Link>
           </div>
 
           {/* right image */}

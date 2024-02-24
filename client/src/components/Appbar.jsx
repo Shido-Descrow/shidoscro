@@ -77,7 +77,7 @@ export default function AppBar() {
                     className={cn(`h-[40px!important] px-[.10rem!important] text-[white!important]
                      bg-[#0086FF!important] hover:bg-[#006BCC!important]`)}
                     switchToActiveChain={true}
-                    theme="default"
+                    theme="dark"
                     // style={"backgroundColor: red"}
                   />
                 </div>

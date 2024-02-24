@@ -41,22 +41,26 @@ function ProductsSection({ products }) {
                   />
                 </div>
                 <div className="py-4 flex flex-col space-y-1">
-                  <h3 className="text-3xl mb-3 font-semibold">{product[0]}
-                  <span className='text-gray-500 ml-2 text-[1.1rem]'>#{parseInt(product["itemId"])}</span> </h3>
+                  <h3 className="text-3xl mb-3 font-semibold">
+                    {product[0]}
+                    <span className="text-gray-500 ml-2 text-[1.1rem]">
+                      #{parseInt(product["itemId"])}
+                    </span>{" "}
+                  </h3>
                   <h3 className="text-xl font-semibold flex">
                     Price :{" "}
                     <p className="font-normal text-sm">
-                      <span className="text-white text-xl">
-                        {parseInt(product["price"])}
+                      <span className="text-white text-xl ml-2">
+                        {parseInt(product["price"] / Math.pow(10, 18))}
                       </span>
-                      WEI
+                      SHIDO
                     </p>
                   </h3>
-
                   <p className="text-xl font-semibold flex flex-col">
                     <p>Merchant address :</p>
                     <span className="text-xs  font-light">{product[3]}</span>
-                  </p>F
+                  </p>
+                  F
                 </div>
                 <button
                   className=" 
