@@ -25,7 +25,7 @@ export default function NewProduct() {
       productName,
       imageLink,
       description,
-      price,
+      price
     });
     await MerchantListProduct(
       productName,
@@ -42,13 +42,14 @@ export default function NewProduct() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="m-4 bg-[#201F2D] p-8 rounded-lg shadow-lg text-[#E4E4E4]"
+      className="m-4  p-8 rounded-lg shadow-lg text-[#E4E4E4]"
     >
-      <h2 className="text-base font-semibold leading-7 text-[#E4E4E4] mb-6">
+      <h2 className="text-3xl border-b py-4 mb-10 border-gray-700 font-semibold leading-7 text-[#E4E4E4] ">
         Add Product
       </h2>
 
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-6">
+      <div className="bg-[#131212] flex flex-col mx-auto
+      max-w-[800px]  p-10 rounded-md gap-6 sm:grid-cols-6">
         <div className="sm:col-span-4">
           <label
             htmlFor="productName"
@@ -64,7 +65,8 @@ export default function NewProduct() {
               value={productName}
               onChange={(e) => setProductName(e.target.value)}
               autoComplete="productName"
-              className="block w-full border border-[#5f5f5f] bg-transparent py-1.5 px-1 text-[#E4E4E4] placeholder-[#B9B9B9] focus:ring-0 text-sm leading-6"
+              className="block w-full border border-[#5f5f5f] bg-transparent 
+              py-1.5 px-1 text-[#E4E4E4] placeholder-[#B9B9B9] focus:ring-0 text-sm leading-6"
               placeholder="Product Name"
             />
           </div>
@@ -131,22 +133,21 @@ export default function NewProduct() {
               placeholder="Price"
             />
           </div>
+          <div className="mt-10 flex justify-start gap-x-6">
+            <button
+              type="button"
+              className="text-sm font-semibold leading-6 rounded-md text-[#E4E4E4] focus-visible:outline-indigo-600"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              className="rounded-md bg-indigo-600  py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 px-10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Save
+            </button>
+          </div>
         </div>
-      </div>
-
-      <div className="mt-6 flex justify-start gap-x-6">
-        <button
-          type="button"
-          className="text-sm font-semibold leading-6 rounded-md text-[#E4E4E4] focus-visible:outline-indigo-600"
-        >
-          Cancel
-        </button>
-        <button
-          type="submit"
-          className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-        >
-          Save
-        </button>
       </div>
     </form>
   );

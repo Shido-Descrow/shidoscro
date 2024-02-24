@@ -11,7 +11,7 @@ function ProductsSection({ products }) {
         product.merchant_add,
         parseInt(product.price?._hex)
       );
-      alert('Product purchased successfully.')
+      alert("Product purchased successfully.");
     } catch (err) {
       console.log(err);
     }
@@ -20,17 +20,18 @@ function ProductsSection({ products }) {
   return (
     <div className="">
       <div className="mx-auto max-w-7xl px-4 py-2 sm:px-6 sm:py-8 lg:px-8">
-        <h2 className="text-2xl font-bold tracking-tight mb-4">
+        <h2 className="text-2xl pb-2 border-b border-gray-700 font-bold tracking-tight mb-4">
           Products Listed
         </h2>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-8">
+        <div className="pt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-8">
           {products.map((product, index) => {
             // let [name, desc, src, merchantAddress, hex1, hex2] = product;
             return (
               <div
                 key={index}
-                className="bg-primary2 group relative rounded-md overflow-hidden  hover:shadow-lg p-4"
+                className="bg-black border border-gray-800 
+                p-7 w-[270px] max-w-[340px] shadow-2xl shadow-gray-900 group relative rounded-md overflow-hidden  hover:shadow-lg"
               >
                 <div className="h-[250px] aspect-w-1 aspect-h-1">
                   <img
@@ -40,17 +41,26 @@ function ProductsSection({ products }) {
                   />
                 </div>
                 <div className="py-4 flex flex-col space-y-1">
-                  <h3 className="text-xl font-medium">{product[0]}</h3>
-                  <p className="text-sm">ETH {parseInt(product["price"])}</p>
-                  <p className="text-xs font-light">
-                    Merchant address: {product[3]}
-                  </p>
-                  <p className="text-xs font-light">
-                    Product ID: {parseInt(product["itemId"])}
-                  </p>
+                  <h3 className="text-3xl mb-3 font-semibold">{product[0]}
+                  <span className='text-gray-500 ml-2 text-[1.1rem]'>#{parseInt(product["itemId"])}</span> </h3>
+                  <h3 className="text-xl font-semibold flex">
+                    Price :{" "}
+                    <p className="font-normal text-sm">
+                      <span className="text-white text-xl">
+                        {parseInt(product["price"])}
+                      </span>
+                      WEI
+                    </p>
+                  </h3>
+
+                  <p className="text-xl font-semibold flex flex-col">
+                    <p>Merchant address :</p>
+                    <span className="text-xs  font-light">{product[3]}</span>
+                  </p>F
                 </div>
                 <button
-                  className="inline-block w-full sm:w-auto mr-auto px-6 py-2 text-xl font-semibold text-center transition-colors duration-150 bg-light text-primary1 rounded-3xl"
+                  className=" 
+                  bg-purple-700 rounded-md px-4 py-1 transition-colors duration-150 "
                   onClick={() => purchase(product)}
                 >
                   Generate agreement

@@ -61,14 +61,14 @@ export default function Dashboard() {
   console.log(toShow);
   return (
     <>
-      <div className="bg-[#0D0D0D] h-screen flex items-center justify-center">
-        <div className="w-[80%] h-screen flex gap-5 text-[#E4E4E4]">
+      <div className="bg-[#0D0D0D] h-screen flex  items-center justify-center">
+        <div className="xl:w-[80%] h-screen flex max-lg:flex-col gap-5 text-[#E4E4E4]">
           <div className="bg-[#201F2D] m-3 w-[70%] p-5 rounded-[20px]">
             <div className="flex p-3 justify-between">
               <p className="text-3xl">Transactions For You</p>
-              <div className="flex gap-2">
+              <div className="flex gap-2 h-max">
                 <button
-                  className={`border-2 px-1 rounded ${
+                  className={`border-2 px-2 rounded ${
                     sortType == 9 ? "border-[#5ed5af]" : "border-[#5f5f5f]"
                   }`}
                   onClick={() => {
@@ -142,12 +142,13 @@ export default function Dashboard() {
             <div className="flex gap-2 col-2">
               {myListedItem &&
                 myListedItem.map((item, index) => (
-                  <div>
+                  <div key={index}>
                     <Card key={index} item={item} />
                   </div>
                 ))}
             </div>
-            <button className="rounded-md m-5 bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            <button
+              className="rounded-md m-5 bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               onClick={() => {
                 navigate("/products/new");
               }}

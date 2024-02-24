@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <main className="flex absolute bottom-0 py-4 px-10 inset-x-0 justify-between items-center border-t border-gray-800">
+    <main className="flex fixed bg-black bottom-0 py-4 px-10 inset-x-0 justify-between items-center border-t border-gray-800">
       <h1 className="text-[1rem] text-semibold">Shidocrow</h1>
       <div className="flex space-x-6 text-black items-center">
         <p className="text-gray-300 flex">
