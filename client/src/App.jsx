@@ -7,13 +7,7 @@ import UpperRibbon from "./components/UpperRibbon";
 import Footer from "./components/Footer";
 
 function App() {
-  const { getAggrements, contract, MerchentRejectAgrement } = useWeb3Context();
-  useEffect(() => {
-    if (contract) fuuc();
-  }, [contract]);
-  const fuuc = async () => {
-    const value = await MerchentRejectAgrement(1234);
-  };
+  const { getAggrements, contract } = useWeb3Context();
   return (
     <div className="w-full min-h-screen bg-primary1">
       <UpperRibbon />

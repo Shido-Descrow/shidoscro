@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import { Mumbai } from "@thirdweb-dev/chains";
+import { Chain } from "./constants";
 import router from "./router.jsx";
 import { ThirdwebProvider } from "@thirdweb-dev/react";
 import { Web3ContextProvider } from "./context";
@@ -12,7 +13,7 @@ import { RouterProvider } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <ThirdwebProvider
-    activeChain={Mumbai}
+    activeChain={Chain}
     clientId="80ed282f6c1f99a481e215f433790552"
   >
     <React.StrictMode>

@@ -6,17 +6,17 @@ const {ThirdwebSDK} = require('@thirdweb-dev/sdk')
 
 const confirmDelivery = async (_aggrementId) => {
   const sdk = await ThirdwebSDK.fromPrivateKey(process.env.PRIVATE_KEY, "mumbai", {
-    secretKey: "uyLVqlytwYKMjaMOarOly684A3JPTikmag",
+    secretKey: "13cb841ad59cfc97d828e08e2e5b3405e08f59e7b69efeb817475a86b2113374",
   });
-  const contract = await sdk.getContract("0x74bc67C463dd2f362CEfd12182A4114B48a6F39b");
+  const contract = await sdk.getContract("0x95b2280e141791bEaa35fcf2C1884554f6991F8e");
   return await contract.call("confirmDellivery", [_aggrementId])
 }
 
 const rejectDelivery = async (_aggrementId) => {
   const sdk = await ThirdwebSDK.fromPrivateKey(process.env.PRIVATE_KEY, "mumbai", {
-    secretKey: "uyLI6Mwj7npOzRBlV7YKMjaMOarOly684A3JPTikmag",
+    secretKey: "13cb841ad59cfc97d828e08e2e5b3405e08f59e7b69efeb817475a86b2113374",
   });
-  const contract = await sdk.getContract("0x74bc67C463dd2f362CEfd12182A4114B48a6F39b");
+  const contract = await sdk.getContract("0x95b2280e141791bEaa35fcf2C1884554f6991F8e");
   return await contract.call("rejectDelivery", [_aggrementId, 'Reverted'])
 } 
 
