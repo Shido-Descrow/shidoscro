@@ -1,5 +1,5 @@
 import React, { useContext, createContext, useState, useEffect } from "react";
-import { useContract, useAddress } from "@thirdweb-dev/react";
+import { useContract } from "@thirdweb-dev/react";
 
 import { ABI } from "../utils";
 const StateContext = createContext();
@@ -8,8 +8,10 @@ export function Web3ContextProvider({ children }) {
   //I dont think we would be needing this for now...
   const [Loading, setLoading] = useState(false);
   const { contract } = useContract(
-    "0x74bc67C463dd2f362CEfd12182A4114B48a6F39b"
+    "0x95b2280e141791bEaa35fcf2C1884554f6991F8e",ABI
+    
   );
+  useEffect(()=>{console.log(contract)},[contract]);
 
   //write calls.
   const MerchentApproveAggrement = async (_aggrementId) => {

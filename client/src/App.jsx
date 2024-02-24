@@ -7,13 +7,7 @@ import AppBar from "./components/Appbar";
 import { Outlet } from "react-router-dom";
 
 function App() {
-  const { getAggrements, contract, MerchentRejectAgrement } = useWeb3Context();
-  useEffect(() => {
-    if (contract) fuuc();
-  }, [contract]);
-  const fuuc = async () => {
-    const value = await MerchentRejectAgrement(1234);
-  };
+  const { getAggrements, contract } = useWeb3Context();
   return (
     <div className="w-full min-h-screen bg-primary1">
       <AppBar />
