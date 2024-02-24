@@ -4,12 +4,13 @@ import { ConnectWallet } from "@thirdweb-dev/react";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import logo from "../assets/logo.png";
+import { cn } from "../../utils/cn";
 
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Products", href: "/products" },
   { name: "History", href: "/history" },
-  { name: "Dashboard", href: "/dashboard" },
+  { name: "Dashboard", href: "/dashboard" }
 ];
 
 // function classNames(...classes) {
@@ -20,10 +21,10 @@ export default function AppBar() {
   const location = useLocation();
   const navigate = useNavigate();
   return (
-    <Disclosure as="nav" className="bg-[#201F2D] text-[#E4E4E4]">
+    <Disclosure as="nav" className="bg-bg text-grayish">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-[1800px] px-2 sm:px-6 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -40,39 +41,52 @@ export default function AppBar() {
 
               <div className="flex flex-1 items-center justify-between sm:items-stretch">
                 <div className="hidden sm:flex flex-shrink-0 items-center">
-                  <img className="h-8 w-auto" src={logo} alt="Logo" />
+                  {/* <img className="h-8 w-auto" src={logo} alt="Logo" />
+                   */}
+                  <h1
+                    className="text-white font-sans 
+                   text-3xl font-semibold"
+                  >
+                    Shidoscro
+                  </h1>
                 </div>
+                {/* nav items */}
                 <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
+                  <div className="flex text-gray-300 space-x-4">
                     {navigation.map((item) => (
                       <a
                         key={item.name}
                         onClick={() => {
                           navigate(item.href);
                         }}
-                        style={{cursor:"pointer"}}
+                        style={{ cursor: "pointer" }}
                         className={`${
-                          location.pathname === item.href ? "bg-[#0077b6]" : ""
-                        } rounded-md px-3 py-2 font-medium`}
+                          location.pathname === item.href
+                            ? "text-white border-b border-gray-400 rounded-none"
+                            : ""
+                        } px-3 py-2 font-medium`}
                       >
                         {item.name}
                       </a>
                     ))}
                   </div>
                 </div>
-              </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-8 sm:pr-0">
-                <ConnectWallet
-                  className=" px-[.5rem!important]"
-                  switchToActiveChain={true}
-                  theme="dark"
-                />
+                {/* wallet button */}
+                <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-8 sm:pr-0 ">
+                  <ConnectWallet
+                    className={cn(`h-[40px!important] px-[.10rem!important] text-[white!important]
+                     bg-[#0086FF!important] hover:bg-[#006BCC!important]`)}
+                    switchToActiveChain={true}
+                    theme="default"
+                    // style={"backgroundColor: red"}
+                  />
+                </div>
               </div>
             </div>
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className="space-y-1 px-2 pb-3 pt-2">
+            <div className="space-y-1 px-2 pb-3 pt-2 ">
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
@@ -81,7 +95,7 @@ export default function AppBar() {
                   className={`${
                     // location.pathname.includes(item.href) ? "bg-[#0077b6]" : ""
                     location.pathname === item.href ? "bg-[#0077b6]" : ""
-                  } rounded-md px-3 py-2 font-medium`}
+                  } rounded-md px-3 py-2 font-medium `}
                 >
                   {item.name}
                 </Disclosure.Button>

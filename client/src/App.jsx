@@ -1,10 +1,8 @@
-import { useState, useEffect } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import { useWeb3Context } from "./context";
-import AppBar from "./components/Appbar";
+import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
+import "./App.css";
+import AppBar from "./components/Appbar";
+import { useWeb3Context } from "./context";
 
 function App() {
   const { getAggrements, contract, MerchentRejectAgrement } = useWeb3Context();
