@@ -21,6 +21,7 @@
     "clsx": "^2.1.0",
     "ethers": "^5.7.2",
     "framer-motion": "^11.0.6",
+    "lucide-react": "^0.338.0",
     "mini-svg-data-uri": "^1.4.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

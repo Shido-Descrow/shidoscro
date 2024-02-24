@@ -47,7 +47,7 @@ export default function AppBar() {
                     className="text-white font-sans 
                    text-3xl font-semibold"
                   >
-                    Shidoscro
+                    Shidoscrow
                   </h1>
                 </div>
                 {/* nav items */}

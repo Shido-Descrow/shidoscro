@@ -8,7 +8,7 @@ export function SparklesText() {
       {/* <h1 className="md:text-[2rem] text-[1.2rem] lg:text-[2.7rem] font-bold text-center text-white relative z-20">
         Shidoscro
       </h1> */}
-      <TextGenerateEffect words="S H I D O S C R O" />
+      <TextGenerateEffect words="S H I D O S C R O W" />
       <div className="w-[2000px] mt-4 relative">
         {/* Gradients */}
         <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
