@@ -1,10 +1,8 @@
-import background from "../assets/background.png";
-import "../App.css";
-import { BackgroundGradientAnimation } from "../components/ui/BgGradient";
-import { SparklesText } from "../components/SparklesText";
-import SecureBox from "../components/SecureBox";
-import { WavyBox } from "../components/WavyBox";
 import { Link } from "react-router-dom";
+import "../App.css";
+import SecureBox from "../components/SecureBox";
+import { SparklesText } from "../components/SparklesText";
+import { WavyBox } from "../components/WavyBox";
 
 function LandingPage() {
   return (

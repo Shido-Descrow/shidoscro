@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { ConnectWallet } from "@thirdweb-dev/react";
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import logo from "../assets/logo.png";
+import logo from "../../public/assets/logo.png";
 import { cn } from "../../utils/cn";
 
 const navigation = [
@@ -41,18 +41,18 @@ export default function AppBar() {
 
               <div className="flex flex-1 items-center justify-between sm:items-stretch">
                 <div className="hidden sm:flex flex-shrink-0 items-center">
-                  {/* <img className="h-8 w-auto" src={logo} alt="Logo" />
-                   */}
-                  <h1
+                  <img className="w-[220px]" src={logo} alt="Logo" />
+
+                  {/* <h1
                     className="text-white font-sans 
                    text-3xl font-semibold"
                   >
                     Shidoscrow
-                  </h1>
+                  </h1> */}
                 </div>
                 {/* nav items */}
-                <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex text-gray-300 space-x-4">
+                <div className="hidden sm:ml-6 my-auto sm:block">
+                  <div className="flex text-gray-300 items-center space-x-4">
                     {navigation.map((item) => (
                       <a
                         key={item.name}

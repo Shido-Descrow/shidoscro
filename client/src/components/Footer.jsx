@@ -3,7 +3,8 @@ import React from "react";
 const Footer = () => {
   return (
     <main className="flex fixed bg-black bottom-0 py-4 px-10 inset-x-0 justify-between items-center border-t border-gray-800">
-      <h1 className="text-[1rem] text-semibold">Shidocrow</h1>
+      <img className="w-[130px]" src={'/assets/logo.png'} alt="Logo" />
+
       <div className="flex space-x-6 text-black items-center">
         <a
           href="https://github.com/Shido-Descrow/shidoscrow"
@@ -29,9 +30,10 @@ const Footer = () => {
           Github
         </a>
         <a
-          href='https://twitter.com/shido'
+          href="https://twitter.com/shido"
           target="_blank"
-          className="text-blue-400 flex">
+          className="text-blue-400 flex"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -48,10 +50,7 @@ const Footer = () => {
           </svg>
           Twitter
         </a>
-        <a
-          href={''}
-          target="_blank"
-          className="text-purple-400 flex">
+        <a href={""} target="_blank" className="text-purple-400 flex">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
