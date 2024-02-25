@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <main className="flex fixed bg-black bottom-0 py-4 px-10 inset-x-0 justify-between items-center border-t border-gray-800">
-      <img className="w-[130px]" src={'/assets/logo.png'} alt="Logo" />
+      <img className="w-[130px]" src={"/assets/logo.png"} alt="Logo" />
 
       <div className="flex space-x-6 text-black items-center">
         <a
@@ -50,7 +50,11 @@ const Footer = () => {
           </svg>
           Twitter
         </a>
-        <a href={""} target="_blank" className="text-purple-400 flex">
+        <a
+          href={"https://dorahacks.io/buidl/10424"}
+          target="_blank"
+          className="text-purple-400 flex"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
