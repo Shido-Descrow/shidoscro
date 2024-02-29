@@ -50,3 +50,7 @@ Shidosccrow is an innovative blockchain-based escrow service built on the Shido 
 Shidosccrow revolutionizes online transactions by leveraging the speed and security of the Shido Chain. It's your trusted partner for hassle-free and secure package deliveries.
 
 Feel free to explore the possibilities and join our community! 😎🌍🚀
+
+UseFull Links:
+   - **Check out the deployed Project:** [Deployed Project](https://shidoscrow.vercel.app/)
+   - **Project Demo Video:** [Project Demo Video](https://youtu.be/9SMJdDFACms) 
